@@ -15,8 +15,8 @@ public class Grupo
             "Thiago",
             new DateTime(2009, 1, 1),
             "/img/Thiago.jpg",
-            new List<string> { "Papá: Carlos", "Mamá: Laura" },
-            new List<string> { "Fútbol", "Series" }
+            new List<string> { "Papa: Carlos", "Mama: Laura" },
+            new List<string> { "Futbol", "Series" }
         );
 
         Integrante i2 = new Integrante(
@@ -24,8 +24,8 @@ public class Grupo
             "Matias",
             new DateTime(2010, 2, 2),
             "/img/matias.jpg",
-            new List<string> { "Papá: Diego", "Mamá: Ana" },
-            new List<string> { "Gym", "Videojuegos" }
+            new List<string> { "Papa: Diego", "Mama: Ana" },
+            new List<string> { "Futbol", "Videojuegos" }
         );
 
         Integrantes.Add(i1.DNI, i1);

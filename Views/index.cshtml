@@ -1,0 +1,34 @@
+@{
+    var integrantes = ViewBag.Integrantes as Dictionary<int, Integrante>;
+}
+
+<h1>Mi Grupo</h1>
+
+@foreach (var item in integrantes)
+{
+    <div>
+        <img src="@item.Value.Foto" width="150" />
+        <p>@item.Value.Nombre</p>
+
+        <a href='@Url.Action("SelectIntegrante","Home", new { dni = item.Key })'>
+            Ver más
+        </a>
+    </div>
+}
+@{
+    var integrantes = ViewBag.Integrantes as Dictionary<int, Integrante>;
+}
+
+<h1>Mi Grupo</h1>
+
+@foreach (var item in integrantes)
+{
+    <div>
+        <img src="@item.Value.Foto" width="150" />
+        <p>@item.Value.Nombre</p>
+
+        <a href='@Url.Action("SelectIntegrante","Home", new { dni = item.Key })'>
+            Ver más
+        </a>
+    </div>
+}

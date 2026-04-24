@@ -7,6 +7,7 @@ namespace TP01_presentacion_web.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    Grupo grupo = new Grupo();
 
     public HomeController(ILogger<HomeController> logger)
     {
