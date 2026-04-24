@@ -19,11 +19,13 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult SelectIntegrante(int dni)
-    {
-        ViewBag.Integrante = grupo.Buscar(dni);
-        return View("infoIntegrante");
-    }
+
+public IActionResult SelectIntegrante(int dni)
+{
+    ViewBag.Integrante = grupo.Buscar(dni);
+    ViewBag.DNI = dni;
+    return View("infoIntegrante");
+}
 
 
     public IActionResult Privacy()
