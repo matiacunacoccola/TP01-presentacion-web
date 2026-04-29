@@ -28,5 +28,5 @@ public IActionResult SelectIntegrante(int dni)
         return RedirectToAction("Index");
 
     ViewBag.Integrante = i;
-    return View();
+    return View("infoIntegrante");
 }}
