@@ -3,9 +3,9 @@ public class Integrante
     public int DNI;
     public string Nombre;
     public DateTime FechaNacimiento;
-    public string Foto;
     public List<string> Familiares;
     public List<string> Intereses;
+    public string Foto { get; set; }
 
     public Integrante(int dni, string nombre, DateTime fecha, string foto, List<string> familiares, List<string> intereses)
     {

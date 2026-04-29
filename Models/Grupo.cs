@@ -14,7 +14,7 @@ public class Grupo
             11111111,
             "Thiago",
             new DateTime(2009, 1, 1),
-            "/img/Thiago.jpg",
+            "Thiago.jpg",
             new List<string> { "Papa: Carlos", "Mama: Laura" },
             new List<string> { "Futbol", "Series" }
         );
@@ -23,7 +23,7 @@ public class Grupo
             22222222,
             "Matias",
             new DateTime(2010, 2, 2),
-            "/img/matias.jpg",
+            "matias.jpg",
             new List<string> { "Papa: Diego", "Mama: Ana" },
             new List<string> { "Futbol", "Videojuegos" }
         );

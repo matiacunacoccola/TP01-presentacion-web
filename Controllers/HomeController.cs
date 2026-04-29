@@ -22,22 +22,11 @@ public class HomeController : Controller
 
 public IActionResult SelectIntegrante(int dni)
 {
-    ViewBag.Integrante = grupo.Buscar(dni);
-    ViewBag.DNI = dni;
-    return View("infoIntegrante");
-}
+    var i = grupo.Buscar(dni);
 
+    if (i == null)
+        return RedirectToAction("Index");
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-    
-    
-}
+    ViewBag.Integrante = i;
+    return View();
+}}

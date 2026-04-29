@@ -1,0 +1,35 @@
+@{
+    var i = ViewBag.Integrante as Integrante;
+}
+
+@if (i == null)
+{
+    <p>Error: integrante no encontrado</p>
+}
+else
+{
+    <h1>@i.Nombre</h1>
+
+    <img src="@Url.Content("~/img/" + i.Foto)" width="200" />
+
+    <p>DNI: @i.DNI</p>
+    <p>Fecha de nacimiento: @i.FechaNacimiento.ToShortDateString()</p>
+
+    <h3>Familiares</h3>
+    <ul>
+    @foreach (var f in i.Familiares)
+    {
+        <li>@f</li>
+    }
+    </ul>
+
+    <h3>Intereses</h3>
+    <ul>
+    @foreach (var inter in i.Intereses)
+    {
+        <li>@inter</li>
+    }
+    </ul>
+
+    <a href='@Url.Action("Index","Home")'>Volver</a>
+}

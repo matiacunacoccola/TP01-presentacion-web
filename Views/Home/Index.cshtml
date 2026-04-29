@@ -1,13 +1,12 @@
-﻿@{
-    var integrantes = ViewBag.Lista as Dictionary<int, Integrante>;
-}
+﻿
 
 <h1>Mi Grupo</h1>
 
-@foreach (var item in integrantes)
+
+@foreach (var item in (Dictionary<int, Integrante>)ViewBag.Lista)
 {
-    <div>
-        <img src="@item.Value.Foto" width="150" />
+    <div class="integrante">
+       <img src="@Url.Content("~/img/" + item.Value.Foto)" width="150" />
         <p>@item.Value.Nombre</p>
 
         <a href='@Url.Action("SelectIntegrante","Home", new { dni = item.Key })'>
